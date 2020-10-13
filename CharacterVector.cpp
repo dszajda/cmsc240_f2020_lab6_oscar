@@ -10,7 +10,7 @@ CharacterVector::~CharacterVector() {}
 
 int CharacterVector::size() 
 {  
-   return ...
+   return this.size();
 }
 
 // just return the character at the specified index; use the at() method rather
