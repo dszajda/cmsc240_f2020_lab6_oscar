@@ -110,15 +110,11 @@ int main()
    std::cout << "appended-to CharacterVector:" << std::endl;
    std::cout << "----------------------------" << std::endl;
    
-   for (int j = 0; j<iv.size(); j++){
-	std::cout << iv.get(j) <<std::endl;
-	}
-
    cv2.appendIntegerVector(iv);
-
    for (int i = 0; i < cv2.size(); i++) {
-       std::cout << cv2.get(i) << std::endl;
+       std::cout << cv2.get(i) << " ";
    }
+   std::cout << " [a n g r e l a]" << std::endl;
 
    //-------------------------------------------------------------------------
 
