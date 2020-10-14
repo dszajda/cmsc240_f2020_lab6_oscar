@@ -18,6 +18,15 @@ int main()
    std::cout << "CharacterVector:" << std::endl;
    std::cout << "----------------" << std::endl;
 
+   std::cout << cv.size() << std::endl;
+   cv.put('a');
+   cv.put('n');
+   cv.put('e');
+   for (int val = 0; val < cv.size(); val++) {
+       std::cout << cv.at(val) << ' ';
+   cv.put('g', 2);
+
+
    //-------------------------------------------------------------------------
 
    // test DoubleVector: put, get, size, out_of_range

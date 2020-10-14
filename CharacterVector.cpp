@@ -29,6 +29,7 @@ void CharacterVector::put(char value, int index)
         this.insert(it, value);
     } else {
         this.push_back(value);
+    }
 }
 
 // use push_back to append
@@ -42,8 +43,7 @@ void CharacterVector::put(char value)
 void CharacterVector::appendDoubleVector(DoubleVector& doubleVector)
 {
     for (unsigned val = 0; val < doubleVector.size(); val++) {
-        double dterm = doubleVector.at(val);
-        char cterm = static_cast<char>(dterm);
+        char cterm = static_cast<char>(doubleVector.at(val));
 	this.push_back(cterm);
     }
 }
@@ -53,9 +53,9 @@ void CharacterVector::appendDoubleVector(DoubleVector& doubleVector)
 void CharacterVector::appendIntegerVector(IntegerVector& integerVector)
 {
     for (unsigned val = 0; val < integerVector.size(); val++) {
-        int iterm = integerVector.at(val);
-	char cterm = static_cast<char>(iterm);
+	char cterm = static_cast<char>(integerVector.at(val));
 	this.push_back(cterm);
+    }
 }
 
 #endif
