@@ -44,22 +44,22 @@ void IntegerVector::put(int value)
 // integer to integerVector
 void IntegerVector::appendCharacterVector(CharacterVector& characterVector)
 {
-    /*for(int j=0; j<characterVector.size(); j++){
-      int app = static_cast<int>(characterVector.at(j));
+    for(int j=0; j<characterVector.size(); j++){
+      int app = static_cast<int>(characterVector.get(j));
       integerVector.push_back(app);
     }
-    */
+
 }
 
 // for each double in doubleVector, use static_cast<int> to append as an
 // integer to integerVector
 void IntegerVector::appendDoubleVector(DoubleVector& doubleVector)
 {
-  /*for(int j=0; j<doubleVector.size(); j++){
-    int temp = static_cast<int>(doubleVector.at(j));
+  for(int j=0; j<doubleVector.size(); j++){
+    int temp = static_cast<int>(doubleVector.get(j));
     integerVector.push_back(temp);
   }
-  */
+
 }
 
 #endif

@@ -20,7 +20,7 @@ int main()
 
    // test empty vector
    std::cout << "size: " <<  cv.size() << " [0]" << std::endl;
-   
+
    // test put() method with single value
    cv.put('a');
    cv.put('n');
@@ -76,29 +76,30 @@ int main()
    std::cout << "size: "   << iv.size() << " [0]" << std::endl;
 
    std::cout << "--------------" << std::endl;
-   iv.put(1);
-   iv.put(2);
-   iv.put(3);
-   iv.put(5);
-   iv.put(4,3);
+   iv.put(97);
+   iv.put(110);
+   iv.put(114);
+   iv.put(101);
+   iv.put(103,3);
 
    // test put(value) method and get() method
-   std::cout << "get: "   << iv.get(0) << " [1]" << std::endl;
+   std::cout << "get: "   << iv.get(0) << " [97]" << std::endl;
    // test put(value,index) method and get() method
-   std::cout << "get: "   << iv.get(3) << " [4]" << std::endl;
+   std::cout << "get: "   << iv.get(3) << " [103]" << std::endl;
    std::cout << "size: "   << iv.size() << " [5]" << std::endl;
 
    for (int i=0; i<iv.size(); i++){
-     std::cout << "get: "   << iv.get(i) << " [1,2,3,4,5]" << std::endl;
+     std::cout << iv.get(i) << " ";
    }
+   std::cout << " [97,110,103,114,101]" << std::endl;
 
    std::cout << "--------------" << std::endl;
-   iv.put(7,7);
-   iv.put(7,-2);
+   iv.put(108,7);
+   iv.put(97,-2);
    for (int i=0; i<iv.size(); i++){
-     std::cout << "get: "   << iv.get(i) << " [1,2,3,4,5,7,7]" << std::endl;
+     std::cout << iv.get(i) << " ";
    }
-
+   std::cout << " [97,110,103,114,101,108,97]" << std::endl;
    //-------------------------------------------------------------------------
 
    // using empty CharacterVector, test appending iv & dv from above
@@ -138,7 +139,18 @@ int main()
    std::cout << "--------------------------" << std::endl;
    std::cout << "appended-to IntegerVector:" << std::endl;
    std::cout << "--------------------------" << std::endl;
+   std::cout << "Original code is: [a n g r e l a f z]" << std::endl;
+   iv2.appendCharacterVector(cv);
+   for (int i=0; i<iv2.size(); i++){
+     std::cout << iv2.get(i) << " ";
+   }
+   std::cout << " [97 110 103 114 101 108 97 102 122]" << std::endl;
 
+   iv2.appendDoubleVector(dv);
+   for (int i=0; i<iv2.size(); i++){
+     std::cout << iv2.get(i) << " ";
+   }
+   std::cout << " []" << std::endl;
    //-------------------------------------------------------------------------
 
    return 0;
