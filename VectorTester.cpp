@@ -22,9 +22,12 @@ int main()
    cv.put('a');
    cv.put('n');
    cv.put('e');
-   for (int val = 0; val < cv.size(); val++) {
+   for (int i = 0; i < cv.size(); i++) {
        std::cout << cv.at(val) << ' ';
+   }
    cv.put('g', 2);
+   for (int i = 0; i < cv.size(); i++) {
+       std::cout << cv.at(val) << ' ';
 
 
    //-------------------------------------------------------------------------
