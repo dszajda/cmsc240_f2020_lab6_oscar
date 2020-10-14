@@ -41,12 +41,21 @@ void CharacterVector::put(char value)
 // character to characterVector
 void CharacterVector::appendDoubleVector(DoubleVector& doubleVector)
 {
+    for (unsigned val = 0; val < doubleVector.size(); val++) {
+        double dterm = doubleVector.at(val);
+        char cterm = static_cast<char>(dterm);
+	this.push_back(cterm);
+    }
 }
 
 // for each integer in integerVector, use static_cast<char> to append as a
 // character to characterVector
 void CharacterVector::appendIntegerVector(IntegerVector& integerVector)
 {
+    for (unsigned val = 0; val < integerVector.size(); val++) {
+        int iterm = integerVector.at(val);
+	char cterm = static_cast<char>(iterm);
+	this.push_back(cterm);
 }
 
 #endif
