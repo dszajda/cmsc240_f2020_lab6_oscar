@@ -24,11 +24,16 @@ char CharacterVector::get(int index)
 // otherwise, use push_back to append to the end of the vector
 void CharacterVector::put(char value, int index)
 {
+    if (index > 0 && index < this.size() - 1) {
+        auto it = this.begin() + index;
+        this.insert(it, value);
+    }
 }
 
 // use push_back to append
 void CharacterVector::put(char value)
 {
+    this.push_back(value);
 }
 
 // for each double in doubleVector, use static_cast<char> to append as a
