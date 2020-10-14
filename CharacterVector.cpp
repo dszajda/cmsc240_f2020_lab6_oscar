@@ -27,7 +27,8 @@ void CharacterVector::put(char value, int index)
     if (index > 0 && index < this.size() - 1) {
         auto it = this.begin() + index;
         this.insert(it, value);
-    }
+    } else {
+        this.push_back(value);
 }
 
 // use push_back to append
