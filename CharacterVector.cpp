@@ -21,11 +21,11 @@ char CharacterVector::get(int index) {
 // if index is size-legitimate, put the value at that index;
 // otherwise, use push_back to append to the end of the vector
 void CharacterVector::put(char value, int index) {
-    if (index > 0 && index < characterVector.size() - 1) {
+    if (index < 0 || index > (int) characterVector.size()) {
+        characterVector.push_back(value);
+    } else {
         auto it = characterVector.begin() + index;
         characterVector.insert(it, value);
-    } else {
-        characterVector.push_back(value);
     }
 }
 

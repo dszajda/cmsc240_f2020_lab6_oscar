@@ -25,12 +25,15 @@ int main()
    testcv.put('n');
    testcv.put('e');
    for (int i = 0; i < testcv.size(); i++) {
-       std::cout << testcv.get(i) << " [a n e]" << std::endl;
+       std::cout << testcv.get(i) << " ";
    }
+   std::cout << " [a n e]" << std::endl;
+
    testcv.put('g', 2);
    for (int i = 0; i < testcv.size(); i++) {
-       std::cout << testcv.get(i) << " [a n g e]" << std::endl;
+       std::cout << testcv.get(i) << " ";
    }
+   std::cout << " [a n g e]" << std::endl;
 
    //-------------------------------------------------------------------------
 
