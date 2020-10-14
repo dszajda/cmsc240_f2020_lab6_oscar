@@ -10,41 +10,41 @@ CharacterVector::~CharacterVector() {}
 
 int CharacterVector::size() 
 {  
-   return this.size();
+   return characterVector.size();
 }
 
 // just return the character at the specified index; use the at() method rather
 // than [] so that an out_of_range error will be thrown for an invalid index
 char CharacterVector::get(int index) 
 { 
-   return this.at(index);
+   return characterVector.at(index);
 }
 
 // if index is size-legitimate, put the value at that index;
 // otherwise, use push_back to append to the end of the vector
 void CharacterVector::put(char value, int index)
 {
-    if (index > 0 && index < this.size() - 1) {
-        auto it = this.begin() + index;
-        this.insert(it, value);
+    if (index > 0 && index < characterVector.size() - 1) {
+        auto it = characterVector.begin() + index;
+        characterVector.insert(it, value);
     } else {
-        this.push_back(value);
+        characterVector.push_back(value);
     }
 }
 
 // use push_back to append
 void CharacterVector::put(char value)
 {
-    this.push_back(value);
+    characterVector.push_back(value);
 }
 
 // for each double in doubleVector, use static_cast<char> to append as a
 // character to characterVector
 void CharacterVector::appendDoubleVector(DoubleVector& doubleVector)
 {
-    for (unsigned val = 0; val < doubleVector.size(); val++) {
+    for (int i = 0; i < doubleVector.size(); i++) {
         char cterm = static_cast<char>(doubleVector.at(val));
-	this.push_back(cterm);
+	characterVector.push_back(cterm);
     }
 }
 
@@ -52,9 +52,9 @@ void CharacterVector::appendDoubleVector(DoubleVector& doubleVector)
 // character to characterVector
 void CharacterVector::appendIntegerVector(IntegerVector& integerVector)
 {
-    for (unsigned val = 0; val < integerVector.size(); val++) {
+    for (i val = 0; i < integerVector.size(); i++) {
 	char cterm = static_cast<char>(integerVector.at(val));
-	this.push_back(cterm);
+	characterVector.push_back(cterm);
     }
 }
 
