@@ -64,6 +64,33 @@ int main()
    std::cout << "-------------" << std::endl;
    std::cout << "DoubleVector:" << std::endl;
    std::cout << "-------------" << std::endl;
+   std::cout << "size: "   << dv.size() << " [0]" << std::endl;
+
+   std::cout << "--------------" << std::endl;
+   dv.put(97.00);
+   dv.put(110.01);
+   dv.put(114.00);
+   dv.put(101.11);
+   dv.put(103,2);
+
+   // test put(value) method and get() method
+   std::cout << "get: "   << dv.get(0) << " [97]" << std::endl;
+   // test put(value,index) method and get() method
+   std::cout << "get: "   << dv.get(2) << " [103]" << std::endl;
+   std::cout << "size: "   << dv.size() << " [5]" << std::endl;
+
+   for (int i=0; i<dv.size(); i++){
+     std::cout << dv.get(i) << " ";
+   }
+   std::cout << " [97,110.01,103,114,101.11]" << std::endl;
+
+   std::cout << "--------------" << std::endl;
+   dv.put(108,7);
+   dv.put(97,-2);
+   for (int i=0; i<dv.size(); i++){
+     std::cout << dv.get(i) << " ";
+   }
+   std::cout << " [97,110.01,103,114,101.11,108,97]" << std::endl;
 
    //-------------------------------------------------------------------------
 
@@ -72,7 +99,6 @@ int main()
    std::cout << "--------------" << std::endl;
    std::cout << "IntegerVector:" << std::endl;
    std::cout << "--------------" << std::endl;
-   IntegerVector iv1;
    std::cout << "size: "   << iv.size() << " [0]" << std::endl;
 
    std::cout << "--------------" << std::endl;
@@ -109,7 +135,7 @@ int main()
    std::cout << "----------------------------" << std::endl;
    std::cout << "appended-to CharacterVector:" << std::endl;
    std::cout << "----------------------------" << std::endl;
-   
+
    cv2.appendIntegerVector(iv);
    for (int i = 0; i < cv2.size(); i++) {
        std::cout << cv2.get(i) << " ";
@@ -130,7 +156,15 @@ int main()
    std::cout << "-------------------------" << std::endl;
    std::cout << "appended-to DoubleVector:" << std::endl;
    std::cout << "-------------------------" << std::endl;
-
+   dv2.appendCharacterVector(cv);
+   for (int i=0; i<dv2.size(); i++){
+     std::cout << dv2.get(i) << " ";
+   }
+   std::cout << "[]" << std::endl;
+   dv2.appendIntegerVector(iv);
+   for (int i=0; i<dv2.size(); i++){
+     std::cout << dv2.get(i) << " ";
+   }
    //-------------------------------------------------------------------------
 
    // using empty IntegerVector, test appending cv & dv from above
