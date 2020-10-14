@@ -20,7 +20,7 @@ int main()
 
    CharacterVector testcv;
 
-   std::cout << "size() : " <<  testcv.size() << " [0]" << std::endl;
+   std::cout << "size: " <<  testcv.size() << " [0]" << std::endl;
    testcv.put('a');
    testcv.put('n');
    testcv.put('e');
@@ -48,6 +48,7 @@ int main()
        std::cout << testcv.get(i) << " ";
    }
    std::cout << " [a n g r e l a f z]" << std::endl;
+   std::cout << "size: " << testcv.size() << " [9]" <<  std::endl;
 
    //-------------------------------------------------------------------------
 
