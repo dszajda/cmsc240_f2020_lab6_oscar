@@ -161,11 +161,15 @@ int main()
    for (int i=0; i<dv2.size(); i++){
      std::cout << dv2.get(i) << " ";
    }
-   std::cout << "[]" << std::endl;
+   std::cout << " [97 110 103 114 101 108 97 102 122]" << std::endl;
+
+
    dv2.appendIntegerVector(iv);
    for (int i=0; i<dv2.size(); i++){
      std::cout << dv2.get(i) << " ";
    }
+   std::cout << " [97 110 103 114 101 108 97 102 122 97 110 103 114 101 108 97]"
+    << std::endl;
    //-------------------------------------------------------------------------
 
    // using empty IntegerVector, test appending cv & dv from above
@@ -186,7 +190,8 @@ int main()
    for (int i=0; i<iv2.size(); i++){
      std::cout << iv2.get(i) << " ";
    }
-   std::cout << " []" << std::endl;
+   std::cout << " [97 110 103 114 101 108 97 102 122 97 110 103 114 101 108 97]"
+    << std::endl;
    //-------------------------------------------------------------------------
 
    return 0;
