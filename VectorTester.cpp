@@ -18,16 +18,18 @@ int main()
    std::cout << "CharacterVector:" << std::endl;
    std::cout << "----------------" << std::endl;
 
-   std::cout << cv.size() << std::endl;
-   cv.put('a');
-   cv.put('n');
-   cv.put('e');
-   for (int i = 0; i < cv.size(); i++) {
-       std::cout << cv.at(val) << ' ';
+   CharacterVector testcv;
+
+   std::cout << testcv.size() << std::endl;
+   testcv.put('a');
+   testcv.put('n');
+   testcv.put('e');
+   for (int i = 0; i < testcv.size(); i++) {
+       std::cout << testcv.at(i) << ' ';
    }
-   cv.put('g', 2);
-   for (int i = 0; i < cv.size(); i++) {
-       std::cout << cv.at(val) << ' ';
+   testcv.put('g', 2);
+   for (int i = 0; i < testcv.size(); i++) {
+       std::cout << testcv.at(i) << ' ';
 
 
    //-------------------------------------------------------------------------
