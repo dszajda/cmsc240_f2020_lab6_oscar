@@ -80,12 +80,12 @@ int main()
    iv.put(110);
    iv.put(114);
    iv.put(101);
-   iv.put(103,3);
+   iv.put(103,2);
 
    // test put(value) method and get() method
    std::cout << "get: "   << iv.get(0) << " [97]" << std::endl;
    // test put(value,index) method and get() method
-   std::cout << "get: "   << iv.get(3) << " [103]" << std::endl;
+   std::cout << "get: "   << iv.get(2) << " [103]" << std::endl;
    std::cout << "size: "   << iv.size() << " [5]" << std::endl;
 
    for (int i=0; i<iv.size(); i++){
@@ -115,6 +115,11 @@ int main()
        std::cout << cv2.get(i) << " ";
    }
    std::cout << " [a n g r e l a]" << std::endl;
+
+   cv2.appendDoubleVector(dv);
+   for (int i = 0; i < cv2.size(); i++) {
+       std::cout << cv2.get(i) << " ";
+   }
 
    //-------------------------------------------------------------------------
 
