@@ -146,6 +146,7 @@ int main()
    for (int i = 0; i < cv2.size(); i++) {
        std::cout << cv2.get(i) << " ";
    }
+   std::cout << " [a n g r e l a a n g r e l a]" << std::endl;
 
    //-------------------------------------------------------------------------
 
