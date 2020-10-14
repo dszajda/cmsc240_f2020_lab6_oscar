@@ -25,11 +25,12 @@ double DoubleVector::get(int index)
 // otherwise, use push_back to append to the end of the vector
 void DoubleVector::put(double value, int index)
 {
-  if (index < 0 || index > (int) doubleVector.size()) {
-      doubleVector.push_back(value);
+  if (index < 0 ||index > (int) doubleVector.size()) {
+	
+	doubleVector.push_back(value);
   } else {
-      auto it = doubleVector.begin() + index;
-      doubleVector.insert(it, value);
+  	std::vector<double>::iterator num = doubleVector.begin();	
+        doubleVector.insert(num+index,value);
   }
 }
 
