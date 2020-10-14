@@ -20,20 +20,33 @@ int main()
 
    CharacterVector testcv;
 
-   std::cout << testcv.size() << std::endl;
-   testcv.put('a');
-   testcv.put('n');
-   testcv.put('e');
+   std::cout << "size() : " <<  testcv.size() << " [0]" << std::endl;
+   testcv.put("a");
+   testcv.put("n");
+   testcv.put("e");
    for (int i = 0; i < testcv.size(); i++) {
        std::cout << testcv.get(i) << " ";
    }
    std::cout << " [a n e]" << std::endl;
 
-   testcv.put('g', 2);
+   testcv.put("g", 2);
    for (int i = 0; i < testcv.size(); i++) {
        std::cout << testcv.get(i) << " ";
    }
    std::cout << " [a n g e]" << std::endl;
+   testcv.put("l");
+   testcv.put("a");
+   for (int i = 0; i < testcv.size(); i++) {
+       std::cout << testcv.get(i) << " ";
+   }
+   std::cout << " [a n g e l a]" << std::endl;
+
+   testcv.put("r", 3);
+   testcv.put("f", 9);
+   for (int i = 0; i < testcv.size(); i++) {
+       std::cout << testcv.get(i) << " ";
+   }
+   std::cout << " [a n g r e l a]" << std::endl;
 
    //-------------------------------------------------------------------------
 
