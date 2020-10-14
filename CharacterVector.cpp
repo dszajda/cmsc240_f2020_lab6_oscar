@@ -36,20 +36,20 @@ void CharacterVector::put(char value) {
 
 // for each double in doubleVector, use static_cast<char> to append as a
 // character to characterVector
-/*void CharacterVector::appendDoubleVector(DoubleVector& doubleVector) {
+void CharacterVector::appendDoubleVector(DoubleVector& doubleVector) {
     for (int i = 0; i < doubleVector.size(); i++) {
-        char cterm = static_cast<char>(doubleVector.at(val));
+        char cterm = static_cast<char>(doubleVector.get(i));
 	characterVector.push_back(cterm);
     }
-}*/
+}
 
 // for each integer in integerVector, use static_cast<char> to append as a
 // character to characterVector
-/*void CharacterVector::appendIntegerVector(IntegerVector& integerVector) {
-    for (i val = 0; i < integerVector.size(); i++) {
-	char cterm = static_cast<char>(integerVector.at(val));
+void CharacterVector::appendIntegerVector(IntegerVector& integerVector) {
+    for (int i = 0; i < integerVector.size(); i++) {
+	char cterm = static_cast<char>(integerVector.get(i));
 	characterVector.push_back(cterm);
     }
-}*/
+}
 
 #endif

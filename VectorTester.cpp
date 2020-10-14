@@ -18,37 +18,43 @@ int main()
    std::cout << "CharacterVector:" << std::endl;
    std::cout << "----------------" << std::endl;
 
-   CharacterVector testcv;
-
-   std::cout << "size: " <<  testcv.size() << " [0]" << std::endl;
-   testcv.put('a');
-   testcv.put('n');
-   testcv.put('e');
-   for (int i = 0; i < testcv.size(); i++) {
-       std::cout << testcv.get(i) << " ";
+   // test empty vector
+   std::cout << "size: " <<  cv.size() << " [0]" << std::endl;
+   
+   // test put() method with single value
+   cv.put('a');
+   cv.put('n');
+   cv.put('e');
+   for (int i = 0; i < cv.size(); i++) {
+       std::cout << cv.get(i) << " ";
    }
    std::cout << " [a n e]" << std::endl;
 
-   testcv.put('g', 2);
-   for (int i = 0; i < testcv.size(); i++) {
-       std::cout << testcv.get(i) << " ";
+   // test put() method at a specific index
+   cv.put('g', 2);
+   for (int i = 0; i < cv.size(); i++) {
+       std::cout << cv.get(i) << " ";
    }
    std::cout << " [a n g e]" << std::endl;
-   testcv.put('l');
-   testcv.put('a');
-   for (int i = 0; i < testcv.size(); i++) {
-       std::cout << testcv.get(i) << " ";
+   cv.put('l');
+   cv.put('a');
+   for (int i = 0; i < cv.size(); i++) {
+       std::cout << cv.get(i) << " ";
    }
    std::cout << " [a n g e l a]" << std::endl;
 
-   testcv.put('r', 3);
-   testcv.put('f', 9);
-   testcv.put('z', -1);
-   for (int i = 0; i < testcv.size(); i++) {
-       std::cout << testcv.get(i) << " ";
+   cv.put('r', 3);
+   cv.put('f', 9);
+   cv.put('z', -1);
+   for (int i = 0; i < cv.size(); i++) {
+       std::cout << cv.get(i) << " ";
    }
    std::cout << " [a n g r e l a f z]" << std::endl;
-   std::cout << "size: " << testcv.size() << " [9]" <<  std::endl;
+   std::cout << "size: " << cv.size() << " [9]" <<  std::endl;
+
+  // test get() method directly
+   std::cout << "get: " << cv.get(0) << " [a]" << std::endl;
+   std::cout << "get: " << cv.get(5) << " [l]" << std::endl;
 
    //-------------------------------------------------------------------------
 
@@ -66,31 +72,31 @@ int main()
    std::cout << "--------------" << std::endl;
    std::cout << "IntegerVector:" << std::endl;
    std::cout << "--------------" << std::endl;
-   IntegerVector intvec1;
-   std::cout << "size: "   << intvec1.size() << " [0]" << std::endl;
+   IntegerVector iv1;
+   std::cout << "size: "   << iv.size() << " [0]" << std::endl;
 
    std::cout << "--------------" << std::endl;
-   intvec1.put(1);
-   intvec1.put(2);
-   intvec1.put(3);
-   intvec1.put(5);
-   intvec1.put(4,3);
+   iv.put(1);
+   iv.put(2);
+   iv.put(3);
+   iv.put(5);
+   iv.put(4,3);
 
    // test put(value) method and get() method
-   std::cout << "get: "   << intvec1.get(0) << " [1]" << std::endl;
+   std::cout << "get: "   << iv.get(0) << " [1]" << std::endl;
    // test put(value,index) method and get() method
-   std::cout << "get: "   << intvec1.get(3) << " [4]" << std::endl;
-   std::cout << "size: "   << intvec1.size() << " [5]" << std::endl;
+   std::cout << "get: "   << iv.get(3) << " [4]" << std::endl;
+   std::cout << "size: "   << iv.size() << " [5]" << std::endl;
 
-   for (int i=0; i<intvec1.size(); i++){
-     std::cout << "get: "   << intvec1.get(i) << " [1,2,3,4,5]" << std::endl;
+   for (int i=0; i<iv.size(); i++){
+     std::cout << "get: "   << iv.get(i) << " [1,2,3,4,5]" << std::endl;
    }
 
    std::cout << "--------------" << std::endl;
-   intvec1.put(7,7);
-   intvec1.put(7,-2);
-   for (int i=0; i<intvec1.size(); i++){
-     std::cout << "get: "   << intvec1.get(i) << " [1,2,3,4,5,7,7]" << std::endl;
+   iv.put(7,7);
+   iv.put(7,-2);
+   for (int i=0; i<iv.size(); i++){
+     std::cout << "get: "   << iv.get(i) << " [1,2,3,4,5,7,7]" << std::endl;
    }
 
    //-------------------------------------------------------------------------
